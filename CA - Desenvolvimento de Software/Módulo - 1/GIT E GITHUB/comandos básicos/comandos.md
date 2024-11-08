@@ -1,4 +1,3 @@
-
 # Cubos Academy | Resumos Git e GitHub
 
 ## Repositório
