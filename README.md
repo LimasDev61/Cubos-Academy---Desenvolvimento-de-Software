@@ -5,7 +5,7 @@
 
 ## <br>**Sobre o Curso** 🚀
 
-Este curso da Cubos Academy, oferece uma imersão em metodologias ágeis aplicadas ao desenvolvimento de back-end e front-end, cobrindo desde conceitos básicos até tópicos avançados, utilizando as tecnologias mais relevantes do mercado. Participarei de práticas e projetos que simulam situações reais do mercado de trabalho, preparando-me para atuar de maneira prática e eficaz em ambientes profissionais. 
+Este curso da [Cubos Academy](https://cubos.academy/cursos/desenvolvimento-de-software), oferece uma imersão em metodologias ágeis aplicadas ao desenvolvimento de back-end e front-end, cobrindo desde conceitos básicos até tópicos avançados, utilizando as tecnologias mais relevantes do mercado. Participarei de práticas e projetos que simulam situações reais do mercado de trabalho, preparando-me para atuar de maneira prática e eficaz em ambientes profissionais. 
 
 ## <br> **Aprendizado** 📚
 
