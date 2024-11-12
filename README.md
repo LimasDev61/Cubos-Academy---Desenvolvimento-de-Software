@@ -9,7 +9,7 @@ Este curso da Cubos Academy, oferece uma imersão em metodologias ágeis aplicad
 
 ## <br> **Aprendizado** 📚
 
-| Módulo | Acesso aos Módulos                                                                                           |
+| Módulos | Acesso aos Módulos                                                                                           |
 |---------------|-------------------------------------------------------------------------------------------------------|
 | Lógica Básica |[Módulo 1](https://github.com/BommerDev/Cubos-Academy---Desenvolvimento-de-Software/tree/Módulo-1)|
 | Aprofundamento em Lógica |[Módulo 2](https://github.com/BommerDev/Cubos-Academy---Desenvolvimento-de-Software/tree/Módulo-2)|
