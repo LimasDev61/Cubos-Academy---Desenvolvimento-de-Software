@@ -1,0 +1,45 @@
+// Declaração de variáveis
+let num1 = 12;
+let num2 = 30;
+
+// Operador de comparação e levando em questão o tipo de igualdade ' === ', String != Int 
+// Operador de comparação independente do tipo ' == ', String + Int
+// Operador de comparação de diferença independente do tipo de dado !=, String + Int
+// Operador de comparação de diferança ' !== '
+// Operador < menor que ...
+// Operador > maior que ...
+// Operador <= menor igual que ...
+// Operador >= maior igual que ...
+
+// utilizando o === igualdade estrita
+let comparacao = num1 === num2;
+// resultado
+console.log(comparacao);
+
+// Utilizando o == igualdade
+comparacao = num1 == num2;
+console.log(comparacao);
+
+// Utilizando o != diferente que, sem se importar com o tipo de dado...
+comparacao = num1 != num2;
+console.log(comparacao);
+
+// Utilizando o !== para verificar diferença estrita
+comparacao = num1 !== num2;
+console.log(comparacao);
+
+// Operador para verificar se um numero é menor < 
+comparacao = num1 < num2;
+console.log(comparacao);
+
+// Operador para verificar se o numero é maior >
+comparacao = num1 > num2;
+console.log(comparacao);
+
+// Operador para verificar se o numero é menor ou igual a ele <=
+comparacao = num1 <= num2;
+console.log(comparacao);
+
+// Operador para verificar se o numero é maior ou igual a ele >=
+comparacao = num1 >= num2;
+console.log(comparacao);
