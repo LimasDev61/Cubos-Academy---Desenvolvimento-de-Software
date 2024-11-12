@@ -29,7 +29,7 @@ Este curso da Cubos Academy, oferece uma imersão em metodologias ágeis aplicad
 <br>
 - [x] Tarefas Realizadas
 
-## <br>**Professores do Curso** 🎓
+## <br>**Professores(as) do Curso** 🎓
 
 
 ## Lucas Carvalho:
