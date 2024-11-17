@@ -1,0 +1,7 @@
+{
+  "code-runner.executorMap": {
+    "typescript": "npx jest -c jest.config.js --findRelatedTests $fullFileName"
+  },
+  "code-runner.runInTerminal": true,
+  "code-runner.clearPreviousOutput": true,
+}
