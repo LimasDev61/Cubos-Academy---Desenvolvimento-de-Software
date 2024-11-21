@@ -63,6 +63,39 @@ Realizou e publicou trabalhos nas áreas de:
 - Identificação de sistemas e estimação de parâmetros
 - Lógica do pensamento matemático
 
-### Contato:
+### *Contato:*
 
-[LinkedIn - Lucas Caldeira](https://www.linkedin.com/in/lucas-jorge-carvalho/)
+[Linkedln - Lucas Caldeira](https://www.linkedin.com/in/lucas-jorge-carvalho/)
+
+## Guido Cerqueira
+
+**Formação Acadêmica:**
+
+Graduado em Análise e Desenvolvimento de Sistemas
+
+**Experiência Profissional:**
+
+Desenvolvedor Web com mais de 9 anos de experiência
+Desenvolvimento de soluções em JavaScript, TypeScript, Node.js, React.js, Java, Python, PHP, Laravel
+Gerenciamento e otimização de bancos de dados MySQL, PostgreSQL, MongoDB
+Desenvolvimento de aplicações web escaláveis e integração de sistemas
+
+**Especializações:**
+
+Desenvolvimento de aplicações full-stack
+Criação de interfaces dinâmicas e responsivas com React.js
+Soluções de backend com Node.js e Laravel
+Outras Competências Técnicas:
+
+Integração de sistemas com APIs REST
+Automação de processos e criação de soluções em Java e Python
+Compartilhamento de conhecimentos e educação em tecnologias web
+
+### *Contato:*
+
+[Linkedln - Guido Cerqueira](https://www.linkedin.com/in/lucas-jorge-carvalho/)
+
+[Canal - YouTube](https://www.youtube.com/@guidocerqueira)
+
+[Canal de Sugestões - Guido Cerqueira](https://docs.google.com/forms/d/e/1FAIpQLSc1LtFghXJzrK7DBz79HRmNb-wczfH12Hyfv7vbEqyyQfv-CQ/viewform)
+
