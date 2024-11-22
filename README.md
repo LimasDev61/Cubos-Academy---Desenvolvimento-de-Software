@@ -27,7 +27,7 @@ Este curso da [Cubos Academy](https://cubos.academy/cursos/desenvolvimento-de-so
 - [ ] Módulo - 5
 - [ ] Módulo - 6
 <br>
-- [x] Tarefas Realizadas
+- [x] ~~Tarefas Realizadas~~
 
 ## <br>**Professores(as) do Curso** 🎓
 
