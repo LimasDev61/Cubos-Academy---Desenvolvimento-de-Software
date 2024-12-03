@@ -6,7 +6,12 @@ type Conn = {
     dbname: string
 }
 
-const conexao = (dados: Required<Conn>) => {
+type TConexao = {
+    driver: string
+    url: string
+}
+
+const conexao = (dados: Conn): Required<TConexao> => {
     const { username, password, host, port, dbname } = dados;
     return {
         driver: 'postgres',

@@ -22,12 +22,40 @@ type Carrinho = {
 
 type TEndereco = {
     cep: string
-    rua: number
+    rua: string
     bairro: string
     cidade: string
     estado: string
 }
 
-type TCarrinhoEndereço = Required<Carrinho | TEndereco>;
+type TNCarrinho = Omit<Carrinho, "tipoTransacao"> & {
+    endereco: TEndereco,
+    tipoTransacao: Lowercase<Carrinho["tipoTransacao"]>
+}
 
-type TLower = Lowercase<Carrinho["tipoTransacao"]>;
+const venda: TNCarrinho = {
+    item: {
+        nome: 'string',
+        descricao: 'string',
+        valor: 1500
+    },
+    qtd: 1,
+    desconto: 5,
+    frete: 120,
+    tipoTransacao: 'debito',
+    cartao: {
+        numero: 80,
+        validade: 'string',
+        nome: 'string',
+        cvv: 555
+    },
+    endereco: {
+        cep: 'string',
+        rua: 'string',
+        bairro: 'string',
+        cidade: 'string',
+        estado: 'string'
+    }
+}
+
+console.log(venda);
