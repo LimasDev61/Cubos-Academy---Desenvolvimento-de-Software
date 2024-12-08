@@ -1,0 +1,15 @@
+{
+  "name": "4-metodos-de-strings",
+  "version": "1.0.0",
+  "main": "1-tudo-objeto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
