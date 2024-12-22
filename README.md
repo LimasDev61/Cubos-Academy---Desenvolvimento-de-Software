@@ -20,8 +20,8 @@ Este curso da [Cubos Academy](https://cubos.academy/cursos/desenvolvimento-de-so
 
 ## <br> **Minha Jornada** 🚩
 
-- [x] ~~Módulo - 1~~
-- [ ] Módulo - 2
+- [x] ~~Módulo - 1~~~
+- [x] ~~Módulo - 2~~
 - [ ] Módulo - 3 
 - [ ] Módulo - 4 
 - [ ] Módulo - 5
