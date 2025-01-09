@@ -4,7 +4,7 @@
   "main": "index-1-require.js",
   "type": "commonjs",
   "scripts": {
-    "test": "jest"
+    "jest": "jest"
   },
   "keywords": [],
   "author": "",
