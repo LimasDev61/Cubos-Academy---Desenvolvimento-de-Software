@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
+import express, { Response, Request } from "express";
 
-// Função para carregar as variáveis de ambiente do arquivo .env
 function loadEnv(filePath: string): void {
     const envPath = path.resolve(__dirname, "..", filePath);
 
@@ -11,7 +11,7 @@ function loadEnv(filePath: string): void {
             const [key, value] = line.split("=");
 
             if (key && value) {
-                process.env[key.trim()] = value.trim().replace(/(^['"]|['"]$)/g, ""); // Remove aspas, se houver
+                process.env[key.trim()] = value.trim().replace(/(^['"]|['"]$)/g, ""); 
             }
         });
     } else {
@@ -19,16 +19,16 @@ function loadEnv(filePath: string): void {
     }
 }
 
-// Carregue o arquivo .env
 loadEnv(".env");
 
-import express, {Response, Request} from "express";
-
 const server = express();
-const port: number = Number(process.env.PORT || 3000);
+const port: number = Number(process.env.PORTA || 3000);
+const nome: string = process.env.NOME || "Visitante";
+const email: string = process.env.EMAIL || "Não informado";
 
 server.get("/", (req: Request, res: Response) => {
-    res.send("<h1>Olá, bem-vindo ao meu primeiro servidor NodeJS com EXPRESS!</h1>");
+    res.send(`<h1>Olá, ${nome}! Bem-vindo ao meu servidor NodeJS com EXPRESS!</h1>
+              <p>Email: ${email}</p>`);
 });
 
 server.listen(port, (err?: Error) => {
@@ -36,5 +36,6 @@ server.listen(port, (err?: Error) => {
         console.error(`Erro ao iniciar o servidor: ${err.message}`);
         process.exit(1);
     }
-    console.log(`Server está escutando a porta ${port}`);
+    console.log(`Servidor está escutando na porta ${port}`);
 });
+
