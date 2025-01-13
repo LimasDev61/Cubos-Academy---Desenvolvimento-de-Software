@@ -1,0 +1,29 @@
+{
+  "name": "exercicios-backend-primeiro-servidor-v3",
+  "version": "1.0.0",
+  "description": "### Instruções para abrir o projeto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimasDev61/exercicios-backend-primeiro-servidor-v3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LimasDev61/exercicios-backend-primeiro-servidor-v3/issues"
+  },
+  "homepage": "https://github.com/LimasDev61/exercicios-backend-primeiro-servidor-v3#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
