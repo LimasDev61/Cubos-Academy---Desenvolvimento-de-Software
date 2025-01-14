@@ -13,6 +13,7 @@ server.get("/usuarios", (req: Request, res: Response) => {
 
 server.get("/usuarios/search", (req: Request, res: Response) => {
   const email = req.query.email as string;
+  const user = getUserEmail(email);
 
   console.log(email)
 
@@ -20,7 +21,6 @@ server.get("/usuarios/search", (req: Request, res: Response) => {
   res.status(400).json({ message: "E-mail não fornecido" });
   }
 
-  const user = getUserEmail(email);
 
   if (user) {
     res.status(200).json(user);
