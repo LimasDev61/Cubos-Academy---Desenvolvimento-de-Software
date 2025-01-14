@@ -6,6 +6,7 @@ const server: Application = express();
 const port = parseInt(process.env.PORT || "3000", 10);
 
 server.get("/", (req: Request, res: Response) => {
+  console.log(req); // conhecendo sobre a requisição
   res.send("Servidor está funcionando normalmente! <3");
 });
 
@@ -17,4 +18,3 @@ server.listen(port, (err?: Error) => {
 
   console.log(`O servidor está escutando a porta ${port}`);
 });
-
