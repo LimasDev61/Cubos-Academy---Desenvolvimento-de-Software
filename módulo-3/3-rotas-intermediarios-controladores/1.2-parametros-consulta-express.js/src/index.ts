@@ -15,12 +15,11 @@ server.get("/usuarios/search", (req: Request, res: Response) => {
   const email = req.query.email as string;
   const user = getUserEmail(email);
 
-  console.log(email)
+  console.log(email);
 
   if (!email) {
-  res.status(400).json({ message: "E-mail não fornecido" });
+    res.status(400).json({ message: "E-mail não fornecido" });
   }
-
 
   if (user) {
     res.status(200).json(user);
