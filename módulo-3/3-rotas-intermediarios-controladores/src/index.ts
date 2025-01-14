@@ -18,3 +18,4 @@ server.listen(port, (err?: Error) => {
 
   console.log(`O servidor está escutando a porta ${port}`);
 });
+
