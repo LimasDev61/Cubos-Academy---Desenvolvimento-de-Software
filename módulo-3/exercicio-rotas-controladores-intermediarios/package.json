@@ -1,0 +1,33 @@
+{
+  "name": "exercicios-rotas-intermediarios-controladores-v3",
+  "version": "1.0.0",
+  "description": "### Instruções para abrir o projeto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LimasDev61/exercicios-rotas-intermediarios-controladores-v3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LimasDev61/exercicios-rotas-intermediarios-controladores-v3/issues"
+  },
+  "homepage": "https://github.com/LimasDev61/exercicios-rotas-intermediarios-controladores-v3#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.6",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

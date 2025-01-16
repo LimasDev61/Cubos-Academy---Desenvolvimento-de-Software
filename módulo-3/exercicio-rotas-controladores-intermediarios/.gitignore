@@ -1,0 +1,4 @@
+node_modules/
+dist/
+req.http
+.env
