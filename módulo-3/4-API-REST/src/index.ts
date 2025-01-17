@@ -1,7 +1,7 @@
 import { Application } from "express";
 import "dotenv/config";
 import rotas from "./rotas";
-import createApp from "../middlewere/createApp"
+import createApp from "../middlewere/createApp";
 
 const server: Application = createApp();
 const port = parseInt(process.env.PORT || "3000", 10);
@@ -15,4 +15,3 @@ server.listen(port, (err?: Error) => {
 
   console.log(`Servidor utilizando a porta ${port}`);
 });
-

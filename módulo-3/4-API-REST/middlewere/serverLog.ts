@@ -1,14 +1,14 @@
 import { Request, Response, NextFunction } from "express";
 
+export const getFormattedDate = (): string => {
+  const date = new Date();
+  return date.toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo",
+  });
+};
+
 const serverLog = (req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
-
-  const getFormattedDate = (): string => {
-    const date = new Date();
-    return date.toLocaleString("pt-BR", {
-      timeZone: "America/Sao_Paulo",
-    });
-  };
 
   res.on("finish", () => {
     const duration = Date.now() - start;
