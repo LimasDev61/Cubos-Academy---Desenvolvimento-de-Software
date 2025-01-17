@@ -1,11 +1,10 @@
-import express, { Application, Router } from "express";
+import { Application } from "express";
 import "dotenv/config";
-import serverLog from "../middlewere/serverLog";
 import rotas from "./rotas";
+import createApp from "../middlewere/createApp"
 
-const server: Application = express();
+const server: Application = createApp();
 const port = parseInt(process.env.PORT || "3000", 10);
-server.use(serverLog);
 
 server.use(rotas);
 
@@ -16,3 +15,4 @@ server.listen(port, (err?: Error) => {
 
   console.log(`Servidor utilizando a porta ${port}`);
 });
+
