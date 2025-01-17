@@ -1,5 +1,13 @@
 import { Request, Response } from "express";
+import instrutoresS, { TInstrutor } from "../../simuladorBancoDeDados";
 
-export const startServer = (_req: Request, res: Response): void => {
-  res.status(200).send("<h1>Olá, mundo!</h1>");
+const encontrarInstrutor = (id: number): TInstrutor | undefined => {
+  return instrutoresS.find((instrutor: TInstrutor) => instrutor.id === id);
+};
+
+export const detalharInstrutor = (req: Request, res: Response): void => {
+  const id: number = parseInt(req.params.id, 10);
+  const instrutor = encontrarInstrutor(id);
+
+  res.status(200).json(instrutor);
 };

@@ -1,4 +1,4 @@
-type TInstrutor = {
+export type TInstrutor = {
     id: number
     nome: string
     idade: number
