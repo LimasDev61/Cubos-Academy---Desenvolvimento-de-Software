@@ -2,8 +2,8 @@ import { Router } from "express";
 import { listarInstrutores } from "./controls/listarInstrutores";
 import { detalharInstrutor } from "./controls/detalharInstrutores";
 import { validarInstrutor } from "../middlewere/middleIdCheck";
-import { cadastrarInstrutor } from "./controls/cadastrarInstrutor";
-import { verificadorEmail } from "../middlewere/middlewareCadastro";
+import { cadastrarInstrutores } from "./controls/cadastrarInstrutor";
+import { verificadorInstrutores } from "../middlewere/middlewareCadastro";
 
 const rotas = Router();
 
@@ -14,7 +14,7 @@ rotas.get("/instrutores", listarInstrutores);
 rotas.get("/instrutores/:id", validarInstrutor, detalharInstrutor);
 
 // CADASTRAR INSTRUTOR
-rotas.post("/instrutores/cadastrar", verificadorEmail, cadastrarInstrutor);
+rotas.post("/instrutores/cadastrar", verificadorInstrutores, cadastrarInstrutores);
 
 // EDITAR UM INSTRUTOR
 // EXCLUIR INSTRUTOR

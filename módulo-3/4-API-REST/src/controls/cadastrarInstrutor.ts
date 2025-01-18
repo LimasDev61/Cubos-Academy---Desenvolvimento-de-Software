@@ -1,29 +1,43 @@
 import { Request, Response } from "express";
 import instrutoresS, { TInstrutor } from "../../simuladorBancoDeDados";
 
-export const cadastrarInstrutor = (req: Request, res: Response): void => {
-  const { nome, idade, email } = req.body;
+export const cadastrarInstrutores = (req: Request, res: Response): void => {
+  const instrutores: TInstrutor[] = req.body;
 
-  const emailExistente = instrutoresS.some(
-    (instrutor) => instrutor.email === email
-  );
-
-  if (emailExistente) {
-    res.status(400).json({ message: "E-mail está cadastrado" });
+  if (!Array.isArray(instrutores) || instrutores.length === 0) {
+    res
+      .status(400)
+      .json({ message: "É necessário enviar uma lista de instrutores válida." });
     return;
   }
 
-  const novoInstrutor: TInstrutor = {
-    id: instrutoresS.length ++,
-    nome,
-    idade,
-    email,
-  };
+  const instrutores_Cadastrados: TInstrutor[] = [];
+  const erros: string[] = [];
 
-  instrutoresS.push(novoInstrutor);
+  instrutores.forEach((instrutor) => {
+    const { nome, idade, email } = instrutor;
+
+    const emailExistente = instrutoresS.some((i) => i.email === email);
+    if (emailExistente) {
+      erros.push(`Erro no instrutor: ${JSON.stringify(instrutor)} - E-mail já cadastrado.`);
+      return;
+    }
+
+    const novoInstrutor: TInstrutor = {
+      id: instrutoresS.length + 1, 
+      nome,
+      idade,
+      email,
+    };
+
+    instrutoresS.push(novoInstrutor);
+    instrutores_Cadastrados.push(novoInstrutor);
+  });
 
   res.status(201).json({
-    message: "Instrutor cadastrado com sucesso.",
-    instrutor: novoInstrutor,
+    message: "Processamento concluído.",
+    instrutores_Cadastrados,
+    erros,
   });
 };
+
