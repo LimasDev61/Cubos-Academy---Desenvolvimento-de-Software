@@ -21,8 +21,9 @@ export const validarInstrutor = (
   const instrutor = encontrarInstrutor(idNum);
 
   if (instrutor) {
-    return next();
+    next();
   } else {
     res.status(404).json({ message: "Instrutor não encontrado" });
+    return;
   }
 };
