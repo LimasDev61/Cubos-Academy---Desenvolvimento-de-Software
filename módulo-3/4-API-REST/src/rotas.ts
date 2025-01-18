@@ -10,6 +10,8 @@ server.get("/instrutores", listarInstrutores);
 
 // DETALHAR AS INFORMAÇÕES DE UM INSTRUTOR
 server.get("/instrutores/:id", validarInstrutor , detalharInstrutor)
+
+
 // CADASTRAR INSTRUTOR
 // EDITAR UM INSTRUTOR
 // EXCLUIR INSTRUTOR

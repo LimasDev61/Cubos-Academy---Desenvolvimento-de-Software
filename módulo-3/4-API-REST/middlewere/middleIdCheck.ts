@@ -10,14 +10,15 @@ export const validarInstrutor = (
   res: Response,
   next: NextFunction
 ): void => {
-  const id: number = parseInt(req.params.id, 10);
+  const { id } = req.params;
+  const idNum = parseInt(id, 10);
 
-  if (isNaN(id)) {
+  if (isNaN(idNum)) {
     res.status(400).json({ message: "Id inválido" });
     return;
   }
 
-  const instrutor = encontrarInstrutor(id);
+  const instrutor = encontrarInstrutor(idNum);
 
   if (instrutor) {
     return next();
