@@ -3,14 +3,6 @@ import instrutoresS, { TInstrutor } from "../../simuladorBancoDeDados";
 
 export const atualizarInstrutor = (req: Request, res: Response): void => {
   const id = parseInt(req.params.id);
-
-  if (!id) {
-    res.status(400).json({
-      message: "É necessário fornecer um ID válido.",
-    });
-    return;
-  }
-
   const instrutorAtt: TInstrutor = req.body;
 
   const instrutorExistente = instrutoresS.find((i: TInstrutor) => i.id === id);
