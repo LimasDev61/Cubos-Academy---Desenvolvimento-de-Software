@@ -5,6 +5,7 @@ import { detalharInstrutor } from "../controls/detalharInstrutores";
 import { verificadorInstrutores } from "../middlewere/middlewareCadastro";
 import { cadastrarInstrutores } from "../controls/cadastrarInstrutor";
 import { atualizarInstrutor } from "../controls/atualizarInstrutor";
+import { excluirInstrutor } from "../controls/excluirInstrutor";
 
 
 const rotas = Router();
@@ -21,6 +22,7 @@ rotas.post("/instrutores/cadastrar", verificadorInstrutores, cadastrarInstrutore
 // EDITAR UM INSTRUTOR
 rotas.put("/instrutores/atualizar/:id", validarInstrutor, atualizarInstrutor);
 // EXCLUIR INSTRUTOR
+rotas.delete("/instrutor/excluir/:id", validarInstrutor, excluirInstrutor);
 
 // CADASTRAR AULA PARA UM INSTRUTOR
 // EXCLUIR UMA AULA PARA UM INSTRUTOR

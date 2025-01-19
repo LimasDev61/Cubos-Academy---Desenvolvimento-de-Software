@@ -5,16 +5,22 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
   const instrutores: TInstrutor[] = req.body;
 
   if (!Array.isArray(instrutores) || instrutores.length === 0) {
-    res
-      .status(400)
-      .json({
-        message: "É necessário enviar uma lista de instrutores válida.",
-      });
+    res.status(400).json({
+      message: "É necessário enviar uma lista de instrutores válida.",
+    });
     return;
   }
 
   const instrutores_Cadastrados: TInstrutor[] = [];
   const erros: string[] = [];
+
+  let novoId = 1;
+
+  const idUsados = new Set(instrutoresS.map((i: TInstrutor) => i.id))
+
+  while(idUsados.has(novoId)) {
+    novoId++;
+  }
 
   instrutores.forEach((instrutor) => {
     const { nome, idade, email } = instrutor;
@@ -32,7 +38,7 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
     }
 
     const novoInstrutor: TInstrutor = {
-      id: instrutoresS.length + 1,
+      id: novoId,
       nome,
       idade,
       email,
@@ -40,6 +46,9 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
 
     instrutoresS.push(novoInstrutor);
     instrutores_Cadastrados.push(novoInstrutor);
+
+    idUsados.add(novoId);
+    novoId++;
   });
 
   res.status(201).json({
