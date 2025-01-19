@@ -7,7 +7,9 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
   if (!Array.isArray(instrutores) || instrutores.length === 0) {
     res
       .status(400)
-      .json({ message: "É necessário enviar uma lista de instrutores válida." });
+      .json({
+        message: "É necessário enviar uma lista de instrutores válida.",
+      });
     return;
   }
 
@@ -17,14 +19,20 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
   instrutores.forEach((instrutor) => {
     const { nome, idade, email } = instrutor;
 
-    const emailExistente = instrutoresS.some((i) => i.email === email);
+    const emailExistente = instrutoresS.some(
+      (i: TInstrutor) => i.email === email
+    );
     if (emailExistente) {
-      erros.push(`Erro no instrutor: ${JSON.stringify(instrutor)} - E-mail já cadastrado.`);
+      erros.push(
+        `Erro no instrutor: ${JSON.stringify(
+          instrutor
+        )} - E-mail já cadastrado.`
+      );
       return;
     }
 
     const novoInstrutor: TInstrutor = {
-      id: instrutoresS.length + 1, 
+      id: instrutoresS.length + 1,
       nome,
       idade,
       email,
@@ -40,4 +48,3 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
     erros,
   });
 };
-

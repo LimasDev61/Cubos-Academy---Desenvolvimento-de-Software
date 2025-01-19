@@ -4,6 +4,7 @@ import { validarInstrutor } from "../middlewere/middleIdCheck";
 import { detalharInstrutor } from "../controls/detalharInstrutores";
 import { verificadorInstrutores } from "../middlewere/middlewareCadastro";
 import { cadastrarInstrutores } from "../controls/cadastrarInstrutor";
+import { atualizarInstrutor } from "../controls/atualizarInstrutor";
 
 
 const rotas = Router();
@@ -18,6 +19,7 @@ rotas.get("/instrutores/:id", validarInstrutor, detalharInstrutor);
 rotas.post("/instrutores/cadastrar", verificadorInstrutores, cadastrarInstrutores);
 
 // EDITAR UM INSTRUTOR
+rotas.put("/instrutores/atualizar/:id", validarInstrutor, atualizarInstrutor);
 // EXCLUIR INSTRUTOR
 
 // CADASTRAR AULA PARA UM INSTRUTOR
