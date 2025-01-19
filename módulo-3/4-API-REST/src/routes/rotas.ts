@@ -1,9 +1,10 @@
 import { Router } from "express";
-import { listarInstrutores } from "./controls/listarInstrutores";
-import { detalharInstrutor } from "./controls/detalharInstrutores";
+import { listarInstrutores } from "../controls/listarInstrutores";
 import { validarInstrutor } from "../middlewere/middleIdCheck";
-import { cadastrarInstrutores } from "./controls/cadastrarInstrutor";
+import { detalharInstrutor } from "../controls/detalharInstrutores";
 import { verificadorInstrutores } from "../middlewere/middlewareCadastro";
+import { cadastrarInstrutores } from "../controls/cadastrarInstrutor";
+
 
 const rotas = Router();
 
