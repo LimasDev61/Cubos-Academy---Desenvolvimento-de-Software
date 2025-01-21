@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import instrutoresS, { TInstrutor } from "../../simuladorBancoDeDados";
 
 export const excluirInstrutor = (req: Request, res: Response): void => {
-  const id = parseInt(req.params.id);
+  const id = parseInt(req.params.id, 10);
 
   const instrutorExistenteIindice = instrutoresS.findIndex(
     (i: TInstrutor) => i.id === id

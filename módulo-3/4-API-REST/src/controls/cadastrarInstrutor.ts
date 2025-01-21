@@ -16,9 +16,9 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
 
   let novoId = 1;
 
-  const idUsados = new Set(instrutoresS.map((i: TInstrutor) => i.id))
+  const idUsados = new Set(instrutoresS.map((i: TInstrutor) => i.id));
 
-  while(idUsados.has(novoId)) {
+  while (idUsados.has(novoId)) {
     novoId++;
   }
 
@@ -52,7 +52,7 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
   });
 
   res.status(201).json({
-    message: "Processamento concluído.",
+    message: "Cadastro concluído.",
     instrutores_Cadastrados,
     erros,
   });

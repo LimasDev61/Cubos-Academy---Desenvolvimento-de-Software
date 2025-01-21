@@ -6,7 +6,8 @@ const encontrarInstrutor = (id: number): TInstrutor | undefined => {
 };
 
 export const detalharInstrutor = (req: Request, res: Response): void => {
-  const id: number = parseInt(req.params.id, 10);
+  const converterBase: number = 10;
+  const id = parseInt(req.params.id, converterBase);
   const instrutor = encontrarInstrutor(id);
 
   res.status(200).json(instrutor);
