@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladorBancoDeDados";
+import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simuladorBancoDeDados";
 
 const encontrarInstrutor = (id: number): TInstrutor | undefined => {
   return instrutoresS.find((instrutor: TInstrutor) => instrutor.id === id);
