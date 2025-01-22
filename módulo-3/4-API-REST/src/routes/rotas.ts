@@ -1,13 +1,17 @@
 import { Router } from "express";
 import { validarInstrutor } from "../middlewere/id-check";
-import { detalharInstrutor, listarInstrutores } from "../controls/detalhar-instrutores";
+import {
+  detalharInstrutor,
+  listarInstrutores,
+} from "../controls/detalhar-instrutores";
 import { verificadorInstrutores } from "../middlewere/cadastro-array";
 import { cadastrarInstrutores } from "../controls/cadastrar-instrutor";
 import { dadosUnicos } from "../middlewere/verificar-dados-cadastro";
 import { atualizarInstrutor } from "../controls/atualizar-instrutor";
 import { atualizacaoPartial } from "../controls/atualizar-instrutor-partial";
 import { excluirInstrutor } from "../controls/excluir-instrutores";
-
+import { atualizarEspecializacao } from "../controls/adicionar-especializacao";
+import { removerEspecializacao } from "../controls/remover-especializacoes";
 
 const rotas = Router();
 
@@ -42,7 +46,14 @@ rotas.patch(
 // EXCLUIR INSTRUTOR
 rotas.delete("/instrutor/excluir/:id", validarInstrutor, excluirInstrutor);
 
-// CADASTRAR AULA PARA UM INSTRUTOR
-// EXCLUIR UMA AULA PARA UM INSTRUTOR
+// CADASTRAR ESPECIALIZAÇÕES PARA UM INSTRUTOR
+rotas.put(
+  "/instrutores/addespec/:id",
+  validarInstrutor,
+  atualizarEspecializacao
+);
+
+// EXCLUIR UMA ESPECIALIZAÇÃO PARA UM INSTRUTOR
+rotas.delete("/instrutores/delespec/:id", removerEspecializacao);
 
 export default rotas;

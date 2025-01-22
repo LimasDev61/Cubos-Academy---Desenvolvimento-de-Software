@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
+import instrutoresS, {
+  TInstrutor,
+} from "../../simuladores-de-dados/simulador-banco-dados";
 
 export const atualizarInstrutor = (req: Request, res: Response): void => {
   const converterBase: number = 10;

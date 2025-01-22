@@ -2,6 +2,10 @@ import { Request, Response } from "express";
 import instrutoresS, {
   TInstrutor,
 } from "../../simuladores-de-dados/simulador-banco-dados";
+import {
+  especialidades,
+  TEspecialidades,
+} from "../../simuladores-de-dados/simulador-dados-especialidades";
 
 export const cadastrarInstrutores = (req: Request, res: Response): void => {
   const instrutores: TInstrutor[] = req.body;
@@ -17,14 +21,14 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
   const erros: string[] = [];
 
   let novoId = 1;
-
   const idUsados = new Set(instrutoresS.map((i: TInstrutor) => i.id));
 
-  while(idUsados.has(novoId)) {
+  while (idUsados.has(novoId)) {
     novoId++;
   }
+
   instrutores.forEach((instrutor) => {
-    const { nome, idade, email } = instrutor;
+    const { nome, idade, email, espec } = instrutor;
 
     const emailExistente = instrutoresS.some(
       (i: TInstrutor) => i.email === email
@@ -38,11 +42,26 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
       return;
     }
 
+    const especialidadesValidas = (espec as number[])
+      .map((id: number) => especialidades.find((e) => e.id === id))
+      .filter((e) => e !== undefined)
+      .map((e) => e!.espec); // Aqui estamos pegando o nome da especialidade
+
+    if (!especialidadesValidas.length && espec.length) {
+      erros.push(
+        `Erro no instrutor: ${JSON.stringify(
+          instrutor
+        )} - Especialidades inválidas.`
+      );
+      return;
+    }
+
     const novoInstrutor: TInstrutor = {
       id: novoId,
       nome,
       idade,
       email,
+      espec: especialidadesValidas,
     };
 
     instrutoresS.push(novoInstrutor);

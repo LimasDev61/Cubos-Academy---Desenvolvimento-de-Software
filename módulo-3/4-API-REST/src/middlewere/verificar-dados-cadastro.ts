@@ -9,8 +9,7 @@ export const dadosUnicos = (
   const instrutor: TInstrutor = req.body;
   const { nome, idade, email } = instrutor;
 
-  const isAlteracao =
-    req.method === "PATCH" || req.method === "PUT";
+  const isAlteracao = req.method === "PATCH" || req.method === "PUT";
 
   if (!isAlteracao) {
     if (!nome || typeof nome !== "string") {

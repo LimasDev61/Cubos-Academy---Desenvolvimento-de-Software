@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import instrutor from "../../simuladores-de-dados/simulador-banco-dados"
+import instrutor from "../../simuladores-de-dados/simulador-banco-dados";
 
 export const instrutores = (req: Request, res: Response): void => {
   !instrutor || instrutor.length === 0

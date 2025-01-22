@@ -1,5 +1,11 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
+import instrutoresS, {
+  TInstrutor,
+} from "../../simuladores-de-dados/simulador-banco-dados";
+import {
+  especialidades,
+  TEspecialidades,
+} from "../../simuladores-de-dados/simulador-dados-especialidades";
 
 export const atualizacaoPartial = (req: Request, res: Response): void => {
   const id = parseInt(req.params.id, 10);
@@ -24,6 +30,22 @@ export const atualizacaoPartial = (req: Request, res: Response): void => {
   }
   if (instrutorAtt.email !== undefined) {
     instrutorExistente.email = instrutorAtt.email;
+  }
+
+  if (instrutorAtt.espec !== undefined) {
+    const especialidadesValidas = (instrutorAtt.espec as number[])
+      .map((id: number) => especialidades.find((e) => e.id === id))
+      .filter((e) => e !== undefined)
+      .map((e) => e!.espec); // Mapear para os nomes das especialidades
+
+    if (!especialidadesValidas.length && instrutorAtt.espec.length) {
+      res.status(400).json({
+        message: `Especialidades inválidas para o instrutor com ID ${id}.`,
+      });
+      return;
+    }
+
+    instrutorExistente.espec = especialidadesValidas;
   }
 
   res.status(200).json({

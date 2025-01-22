@@ -3,7 +3,6 @@ import "dotenv/config";
 import createApp from "../middlewere/create-app";
 import rotas from "./rotas";
 
-
 const server: Application = createApp();
 const port = parseInt(process.env.PORT || "3000", 10);
 

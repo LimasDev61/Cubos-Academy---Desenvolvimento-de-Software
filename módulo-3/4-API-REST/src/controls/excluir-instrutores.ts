@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
+import instrutoresS, {
+  TInstrutor,
+} from "../../simuladores-de-dados/simulador-banco-dados";
 
 export const excluirInstrutor = (req: Request, res: Response): void => {
   const id = parseInt(req.params.id, 10);
