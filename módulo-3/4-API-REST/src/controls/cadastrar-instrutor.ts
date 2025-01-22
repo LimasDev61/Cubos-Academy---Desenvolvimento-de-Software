@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simuladorBancoDeDados";
+import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
 
 export const cadastrarInstrutores = (req: Request, res: Response): void => {
   const instrutores: TInstrutor[] = req.body;

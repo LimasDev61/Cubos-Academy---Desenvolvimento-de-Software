@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import { TInstrutor } from "../../simuladores-de-dados/simuladorBancoDeDados";
+import { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
 import { dadosUnicos } from "./verificar-dados-cadastro";
 
 let instrutoresS: TInstrutor[] = [];
