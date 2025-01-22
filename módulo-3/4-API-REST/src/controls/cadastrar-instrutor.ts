@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
-import instrutoresS, { TInstrutor } from "../../simuladores-de-dados/simulador-banco-dados";
+import instrutoresS, {
+  TInstrutor,
+} from "../../simuladores-de-dados/simulador-banco-dados";
 
 export const cadastrarInstrutores = (req: Request, res: Response): void => {
   const instrutores: TInstrutor[] = req.body;
@@ -18,10 +20,9 @@ export const cadastrarInstrutores = (req: Request, res: Response): void => {
 
   const idUsados = new Set(instrutoresS.map((i: TInstrutor) => i.id));
 
-  while (idUsados.has(novoId)) {
+  while(idUsados.has(novoId)) {
     novoId++;
   }
-
   instrutores.forEach((instrutor) => {
     const { nome, idade, email } = instrutor;
 

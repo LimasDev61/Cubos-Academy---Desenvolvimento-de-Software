@@ -1,18 +1,18 @@
 import { Router } from "express";
-import { listarInstrutores } from "../controls/listarInstrutores";
-import { validarInstrutor } from "../middlewere/middleIdCheck";
-import { detalharInstrutor } from "../controls/detalharInstrutores";
-import { dadosUnicos } from "../middlewere/verificar-dados-cadastro";
-import { cadastrarInstrutores } from "../controls/cadastrarInstrutor";
-import { atualizarInstrutor } from "../controls/atualizarInstrutor";
-import { excluirInstrutor } from "../controls/excluirInstrutor";
-import { atualizacaoPartial } from "../controls/atualizarInstrutorPartial";
+import { validarInstrutor } from "../middlewere/id-check";
+import { detalharInstrutor, listarInstrutores } from "../controls/detalhar-instrutores";
 import { verificadorInstrutores } from "../middlewere/cadastro-array";
+import { cadastrarInstrutores } from "../controls/cadastrar-instrutor";
+import { dadosUnicos } from "../middlewere/verificar-dados-cadastro";
+import { atualizarInstrutor } from "../controls/atualizar-instrutor";
+import { atualizacaoPartial } from "../controls/atualizar-instrutor-partial";
+import { excluirInstrutor } from "../controls/excluir-instrutores";
+
 
 const rotas = Router();
 
 // LISTAR TODOS OS INSTRUTORES
-rotas.get("/instrutores", listarInstrutores);
+rotas.get("/instrutores", listarInstrutores, detalharInstrutor);
 
 // DETALHAR AS INFORMAÇÕES DE UM INSTRUTOR
 rotas.get("/instrutores/:id", validarInstrutor, detalharInstrutor);

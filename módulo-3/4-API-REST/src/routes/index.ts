@@ -1,7 +1,8 @@
 import { Application } from "express";
 import "dotenv/config";
+import createApp from "../middlewere/create-app";
 import rotas from "./rotas";
-import createApp from "../middlewere/createApp";
+
 
 const server: Application = createApp();
 const port = parseInt(process.env.PORT || "3000", 10);

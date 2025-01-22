@@ -1,5 +1,5 @@
 import express, { json, Express } from "express";
-import serverLog from "./serverLog";
+import serverLog from "./server-log";
 
 const createApp = (): Express => {
   const app: Express = express();
