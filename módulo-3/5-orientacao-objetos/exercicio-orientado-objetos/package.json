@@ -1,0 +1,17 @@
+{
+  "name": "exercicios-orientacao-objetos-v3",
+  "version": "1.0.0",
+  "description": "Exercícios sobre orientação a objetos",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
