@@ -8,4 +8,5 @@ const autor = new Autor();
 
 rotas.get("/", inicioApp);
 rotas.get("/autores", autor.listar.bind(autor));
+rotas.get("/autores/:id", autor.detalharAutor.bind(autor));
 

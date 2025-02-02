@@ -6,11 +6,17 @@ export default class AutorControl {
     inicioApp(req, res);
   }
   listar(req: Request, res: Response): void {
-    res.status(200).json({autores});
+    res.status(200).json({ autores });
   }
 
   detalharAutor(req: Request, res: Response): void {
     const { id } = req.params;
-    
+
+    const autor = autores.find((autor) => autor.id === id);
+
+    if (!autor) {
+      res.status(404).json({ error: "Autor não encontrado" });
+      return;
+    }
   }
 }
