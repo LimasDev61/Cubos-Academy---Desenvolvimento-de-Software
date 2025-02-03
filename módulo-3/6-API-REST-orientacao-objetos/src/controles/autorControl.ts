@@ -29,7 +29,9 @@ export default class AutorControl {
       return;
     }
 
-    if(autores.find((autor) => autor.nome === nome)) {
+    const autorExiste = autores.find((autor) => autor.nome === nome);
+
+    if(autorExiste === nome) {
       res.status(400).json({ error: "Autor ja existe" });
       return;
     }
