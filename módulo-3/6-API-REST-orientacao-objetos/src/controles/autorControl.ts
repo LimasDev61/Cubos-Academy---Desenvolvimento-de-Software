@@ -13,7 +13,7 @@ export default class AutorControl {
   detalharAutor(req: Request, res: Response): void {
     const { id } = req.params;
 
-    const autor = autores.find((autor) => autor.id === id);
+    const autor = autores.find((autor) => autor.id === id.trim());
 
     if (!autor) {
       res.status(404).json({ error: "Autor não encontrado" });
@@ -44,5 +44,28 @@ export default class AutorControl {
     autores.push(autor);
 
     res.status(201).json({ autor });
+  }
+
+  editar(req: Request, res: Response): void {
+    const { id } = req.params;
+    const { nome, idade } = req.body;
+
+    const autor = autores.find((autor) => autor.id === id.trim());
+
+    if (!autor) {
+      res.status(404).json({ error: "Autor não encontrado" });
+      return;
+    }
+
+    autor.nome = nome || autor.nome;
+    autor.idade = idade || autor.idade;
+
+    if (!nome || !idade) {
+      res.status(400).json({ error: "Necessario informar o nome e idade" });
+      return;
+    }
+
+    res.status(204).json({ autor });
+    return;
   }
 }
