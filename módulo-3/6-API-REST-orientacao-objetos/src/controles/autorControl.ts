@@ -68,4 +68,19 @@ export default class AutorControl {
     res.status(204).json({ autor });
     return;
   }
+
+  excluir(req: Request, res: Response): void {
+    const { id } = req.params;
+
+    const autor = autores.findIndex((autor) => autor.id === id.trim());
+
+    if (autor === -1) {
+      res.status(404).json({ error: "Autor nao encontrado" });
+      return;
+    }
+
+    autores.splice(autor, 1);
+
+    res.status(204).json({ autor });
+}
 }
