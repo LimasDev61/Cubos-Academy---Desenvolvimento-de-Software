@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { inicioApp } from "./inicio";
 import { autores } from "../simuladorBD";
+import Autor from "../modelos/autor";
 export default class AutorControl {
   inicio(req: Request, res: Response): void {
     inicioApp(req, res);
@@ -18,5 +19,28 @@ export default class AutorControl {
       res.status(404).json({ error: "Autor não encontrado" });
       return;
     }
+  }
+
+  cadastrar(req: Request, res: Response): void {
+    const { nome, idade } = req.body;
+
+    if (!nome || !idade) {
+      res.status(400).json({ error: "Necessario informar o nome e idade" });
+      return;
+    }
+
+    if(autores.find((autor) => autor.nome === nome)) {
+      res.status(400).json({ error: "Autor ja existe" });
+      return;
+    }
+
+    const autor = new Autor({
+      nome,
+      idade,
+    })
+
+    autores.push(autor);
+
+    res.status(201).json({ autor });
   }
 }
