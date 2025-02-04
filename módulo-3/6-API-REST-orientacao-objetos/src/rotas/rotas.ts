@@ -18,5 +18,5 @@ rotas.delete("/autores/:id", autor.excluir.bind(autor));
 rotas.get("/posts", post.listar.bind(post));
 rotas.get("/posts/:id", post.detalharPost.bind(post));
 rotas.post("/posts", post.cadastrar.bind(post));
-rotas.put("/posts/:id", post.editar.bind(post));
+rotas.patch("/posts/:id", post.editar.bind(post));
 rotas.delete("/posts/:id", post.excluir.bind(post));
