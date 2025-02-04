@@ -31,7 +31,7 @@ export default class AutorControl {
 
     const autorExiste = autores.find((autor) => autor.nome === nome);
 
-    if(autorExiste === nome) {
+    if (autorExiste === nome) {
       res.status(400).json({ error: "Autor ja existe" });
       return;
     }
@@ -39,7 +39,7 @@ export default class AutorControl {
     const autor = new Autor({
       nome,
       idade,
-    })
+    });
 
     autores.push(autor);
 
@@ -82,5 +82,5 @@ export default class AutorControl {
     autores.splice(autor, 1);
 
     res.status(204).json({ autor });
-}
+  }
 }
