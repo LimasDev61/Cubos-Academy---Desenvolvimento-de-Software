@@ -1,0 +1,46 @@
+{
+  "lendas": [
+    {
+      "id": 1,
+      "titulo": "A Loira do Banheiro",
+      "origem": "Brasil",
+      "tipo": "Fantasma",
+      "descricao": "Uma lenda sobre o espírito de uma mulher loira que assombra banheiros de escolas."
+    },
+    {
+      "id": 2,
+      "titulo": "O Homem do Saco",
+      "origem": "Vários Países",
+      "tipo": "Monstro",
+      "descricao": "Uma lenda sobre um homem que captura crianças desobedientes em um saco."
+    },
+    {
+      "id": 3,
+      "titulo": "A Lenda do Carro Preto",
+      "origem": "Brasil",
+      "tipo": "sequestro",
+      "descricao": "Era um carro preto que sequestrava as crianças que se perdiam na rua"
+    },
+    {
+      "id": 4,
+      "titulo": "Facas escondidas nos bonecos do Fofão",
+      "origem": "Brasil",
+      "tipo": "Brinquedos Possuídos",
+      "descricao": "Acreditava-se que dentro do boneco havia um punhal negro a qual era associado ao pacto com o diabo"
+    },
+    {
+      "id": 5,
+      "titulo": "Chupa-cabra",
+      "origem": "Brasil",
+      "tipo": "Vampiro-Animal",
+      "descricao": "Acreditava-se que um vampiro-animal em 1995 sugou e matou 5 cabras em um campo. Depois desse episódio, mais de 150 casos foram registrados no Brasil"
+    },
+    {
+      "id": 6,
+      "titulo": "Gangue-do-Palhaço",
+      "origem": "Brasil",
+      "tipo": "Assasinatos",
+      "descricao": "Inspirado em um evento brutal dos EUA, onde um palhaço matou diversas crianças em 1960. A gangue do palhaço, dirigia uma Kombi Azul pela Osasco, roubando orgãos infantis."
+    }
+  ]
+}
