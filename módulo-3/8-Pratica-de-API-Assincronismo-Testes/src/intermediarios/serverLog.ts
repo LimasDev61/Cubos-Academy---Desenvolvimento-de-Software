@@ -6,14 +6,16 @@ export function getData() {
 }
 
 export const serverLog = (req: Request, res: Response, next: NextFunction) => {
-    const inicio = Date.now();
+  const inicio = Date.now();
 
-    res.on("finish", () => {
-        const duracao = Date.now() - inicio;
-        const dataFormatada = getData();
+  res.on("finish", () => {
+    const duracao = Date.now() - inicio;
+    const dataFormatada = getData();
 
-        console.log(
-            `[${dataFormatada}] ${req.method} ${req.url} ${res.statusCode} ${duracao}ms`
-        )
-    })
-}
+    console.log(
+      `[${dataFormatada}] ${req.method} ${req.url} ${res.statusCode} ${duracao}ms`
+    );
+  });
+
+  next();
+};

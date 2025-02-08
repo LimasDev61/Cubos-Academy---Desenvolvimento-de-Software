@@ -6,14 +6,14 @@ import express, {
   Express,
 } from "express";
 
-import { rotas } from "../rotas/rotas";
 import { serverLog } from "../intermediarios/serverLog";
+import { rots } from "../rotas/routs";
 
 export const createServer = (): Express => {
   const app = express();
-  app.use(serverLog);
   app.use(json());
-  app.use(rotas);
+  app.use(serverLog);
+  app.use(rots);
 
   app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
     if (err instanceof Error) {
@@ -21,7 +21,8 @@ export const createServer = (): Express => {
       res
         .status(500)
         .json({ message: err.message || "Erro interno do servidor" });
-      return;
+    } else {
+      res.status(500).json({ error: "Erro interno do servidor" });
     }
 
     next();
