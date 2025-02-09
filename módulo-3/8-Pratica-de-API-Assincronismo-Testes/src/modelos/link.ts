@@ -8,4 +8,24 @@ export default class Link {
         this.url = url;
         this.visitas = 0;
     }
-};
+
+    public getId(): string {
+        return this.id;
+    }
+
+    public getUrl(): string {
+        return this.url;
+    }
+
+    public getVisitasContador(): number {
+        return this.visitas;
+    }
+
+    public incrementarVisitas(): void {
+        this.visitas++;
+    }
+
+    public setUrl(novaUrl: string): void {
+        this.url = novaUrl;
+    }
+}
