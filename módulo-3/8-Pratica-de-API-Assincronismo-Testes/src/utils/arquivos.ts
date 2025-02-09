@@ -1,6 +1,5 @@
 import fs from 'fs/promises';
 import Link from '../modelos/link';
-import { link } from 'fs';
 
 export const lerDados = async (): Promise<Link[]> => {
     const dados = await fs.readFile('banco-de-dados.json');
