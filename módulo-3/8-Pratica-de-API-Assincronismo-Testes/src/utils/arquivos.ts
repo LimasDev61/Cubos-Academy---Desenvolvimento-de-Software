@@ -28,8 +28,7 @@ export const contarVisitas = async (id: string): Promise<void> => {
   }
 
   const linkVisitas: Link = {
-    id: link.id,
-    url: link!.url,
+    ...link,
     visitas: link.visitas + 1
   }
 
