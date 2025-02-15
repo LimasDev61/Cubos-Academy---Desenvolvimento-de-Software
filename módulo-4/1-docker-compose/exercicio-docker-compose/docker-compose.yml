@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  web-1:
+    container_name: meu_container-1
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+
+  web-2:
+    container_name: meu_container-2
+    image: nginx:alpine
+    ports:
+      - "8081:80"
