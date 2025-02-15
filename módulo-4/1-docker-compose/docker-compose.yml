@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+  web1:
+    image: nginx:alpine
+    ports:
+      - "8081:80"
