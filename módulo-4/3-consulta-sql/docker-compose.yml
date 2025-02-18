@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgresuser
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - C:\Users\USUARIO1\Documents\Volume\docker-compose-bd:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
