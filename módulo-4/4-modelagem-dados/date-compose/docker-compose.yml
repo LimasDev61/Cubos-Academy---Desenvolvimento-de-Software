@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  postgres:
+    container_name: aula_modelagem_dados
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: limasdev
+      POSTGRES_PASSWORD: 124917
+      POSTGRES_DB: finances
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
