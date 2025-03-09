@@ -1,3 +1,5 @@
+-- CREATE
+
 create database shop;
 
 create table "categories" (
@@ -21,3 +23,25 @@ create table "products" (
 
 insert into categories (description) values ('Papelaria');
 insert into categories (description) values ('Cozinha'), ('Móveis'), ('Eletrodomésticos');
+
+insert into products (name, description, price, categories_id)
+values
+('Geladeira', 'brastemp', 15000, 4)
+
+-- SELECT VIEWS
+
+select * from products;
+select * from categories;
+
+create view products_morethan_10000 as 
+select id, name, price from products where price > 10000 order by price asc;
+
+select * from products_morethan_10000;
+
+create view products_description_not_null as 
+select * from products where description is not null;
+
+select * from products_description_not_null;
+
+--UPDATE
+
