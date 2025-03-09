@@ -1,5 +1,7 @@
 -- CREATE
 
+create database shop;
+
 create table "categories" (
    "id"          serial not null,
    "description" text not null,
@@ -65,3 +67,6 @@ where id = 4
 
 --DELETE
 
+delete from products where id = 4;
+delete from products where categories_id = 3;
+delete from categories where id = 3;
