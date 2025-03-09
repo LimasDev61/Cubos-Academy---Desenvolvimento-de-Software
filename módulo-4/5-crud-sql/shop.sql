@@ -1,3 +1,5 @@
+create database shop;
+
 create table "categories" (
    "id"          serial not null,
    "description" text not null,
@@ -15,5 +17,7 @@ create table "products" (
    primary key ( "id" ),
    constraint "products_category_id" foreign key ( "categories_id" )
       references "public"."categories" ( "id" )
-         on delete cascade
 );
+
+insert into categories (description) values ('Papelaria');
+insert into categories (description) values ('Cozinha'), ('Móveis'), ('Eletrodomésticos');
