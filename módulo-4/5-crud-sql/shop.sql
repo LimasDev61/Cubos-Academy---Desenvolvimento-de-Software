@@ -1,7 +1,5 @@
 -- CREATE
 
-create database shop;
-
 create table "categories" (
    "id"          serial not null,
    "description" text not null,
@@ -44,4 +42,26 @@ select * from products where description is not null;
 select * from products_description_not_null;
 
 --UPDATE
+
+update products
+set description = 'Caneta Esferográfica Azul - Bic'
+where id = 2
+
+update products
+set description = 'Sem descrição'
+where description is null;
+
+update products
+set description = 'Sem descrição'
+where id in (1, 3);
+
+update products
+set description = 'Potencia 500w', name = 'Liquidificador Turbo', price = 200000
+where id = 3;
+
+update products
+set categories_id = 1
+where id = 4
+
+--DELETE
 
