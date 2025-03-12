@@ -1,57 +1,49 @@
-create database hogwarts;
+CREATE DATABASE hogwarts;
 
-drop table if exists houses;
+DROP TABLE IF EXISTS houses;
 create table houses (
-   id   serial primary key,
-   name varchar(50) not null
+  id serial primary key,
+  name varchar(50) not null
 );
 
-drop table if exists parents;
+DROP TABLE IF EXISTS parents;
 create table parents (
-   id   serial primary key,
-   name varchar(50)
+  id serial primary key,
+  name varchar (50)
 );
 
-drop table if exists students;
+DROP TABLE IF EXISTS students;
 create table students (
-   id       serial primary key,
-   name     varchar(50) not null,
-   year     integer not null,
-   house_id integer
-      references houses ( id )
+  id serial primary key,
+  name varchar(50) not null,
+  year integer not null,
+  house_id integer references houses(id)
 );
 
-drop table if exists teachers;
+DROP TABLE IF EXISTS teachers;
 create table teachers (
-   id       serial primary key,
-   name     varchar(50) not null,
-   house_id integer
-      references houses ( id )
+  id serial primary key,
+  name varchar(50),
+  house_id integer references houses(id)
 );
 
-drop table if exists classes;
+DROP TABLE IF EXISTS classes;
 create table classes (
-   id          serial primary key,
-   name        varchar(50) not null,
-   teachers_id integer
-      references teachers ( id )
+  id serial primary key,
+  subject varchar(50),
+  teacher_id integer references teachers(id)
 );
 
-drop table if exists par_child_rels;
+DROP TABLE IF EXISTS par_child_rels;
 create table par_child_rels (
-   id         serial primary key,
-   student_id integer
-      references students ( id ),
-   parent1_id integer
-      references parents ( id ),
-   parent2_id integer
-      references parents ( id )
+  id serial primary key,
+  student_id integer references students(id),
+  parent1_id integer references parents(id),
+  parent2_id integer references parents(id)
 );
 
-drop table if exists class_rosters;
+DROP TABLE IF EXISTS class_rosters;
 create table class_rosters (
-   class_id   integer
-      references classes ( id ),
-   student_id integer
-      references students ( id )
+  class_id integer references classes(id),
+  student_id integer references students(id)
 );
