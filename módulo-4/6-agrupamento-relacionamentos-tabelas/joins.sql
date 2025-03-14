@@ -80,3 +80,20 @@ on cr.class_id = c.id
 on cr.student_id = s.id
  group by c.id,
           c.subject;
+
+-- INNER JOIN
+select *
+  from teachers;
+select *
+  from houses;
+
+select *
+  from teachers t
+ inner join houses
+on t.house_id = houses.id;
+
+-- LEFT JOIN 
+select * from teachers t left join houses on t.house_id = houses.id;
+
+-- RIGHT JOIN
+select * from teachers t right join houses on t.house_id = houses.id;
