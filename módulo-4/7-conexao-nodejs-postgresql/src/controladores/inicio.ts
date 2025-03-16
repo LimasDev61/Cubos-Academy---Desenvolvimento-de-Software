@@ -11,17 +11,17 @@ export const inicio = async (req: Request, res: Response) => {
 
     const respostaDaPesquisa = await pool.query(query);
 
-    const filiais = respostaDaPesquisa.rows.map((filaial) => ({
-      id: filaial.id,
-      cep: filaial.cep,
-      rua: filaial.rua,
-      cidade: filaial.cidade,
-      estado: filaial.estado,
-      pais: filaial.pais,
+    const filiais = respostaDaPesquisa.rows.map((filiais) => ({
+      id: filiais.id,
+      cep: filiais.cep,
+      rua: filiais.rua,
+      cidade: filiais.cidade,
+      estado: filiais.estado,
+      pais: filiais.pais,
       empresa: {
-        id: filaial.empresa_id,
-        nome: filaial.nome,
-        site: filaial.site,
+        id: filiais.empresa_id,
+        nome: filiais.nome,
+        site: filiais.site,
       },
     }));
 
