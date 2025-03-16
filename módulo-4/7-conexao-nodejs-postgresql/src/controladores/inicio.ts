@@ -1,15 +1,13 @@
 import { Request, Response } from "express";
-import pool from "../conexao";
+import { pool } from "../conexao";
 
 export const inicio = async (req: Request, res: Response) => {
   try {
-    const query = `
-			select f.id, f.cep, f.rua, f.cidade, f.estado, f.pais, f.empresa_id, e.nome, e.site 
-			from empresas as e
-			left join filiais as f on e.id = f.empresa_id;
-		`
-		const resposta = await pool.query(query)
+    const resposta = await pool.query("SELECT * FROM empresas");
+    res.json(resposta.rows);
   } catch (error) {
-    console.log(error);
-  }  
+    console.error("Erro ao buscar empresas:", error);
+    res.status(500).json({ message: "Erro ao buscar empresas" });
+  }
 };
+
