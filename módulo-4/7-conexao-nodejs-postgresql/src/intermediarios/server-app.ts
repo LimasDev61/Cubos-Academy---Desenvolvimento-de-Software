@@ -24,8 +24,6 @@ export const createServer = (): Express => {
     } else {
       res.status(500).json({ error: "Erro interno do servidor" });
     }
-
-    next();
   });
 
   return app;
