@@ -28,7 +28,7 @@ export const encontrarEmpresasPorId = async (req: Request, res: Response) => {
       id: empresa_id,
       nome,
       site,
-      filiais
+      filiais,
     };
 
     res.status(200).json(empresas);
