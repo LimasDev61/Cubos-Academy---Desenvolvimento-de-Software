@@ -1,5 +1,5 @@
 import { Pool } from "pg";
-import "dotenv/config"; 
+import "dotenv/config";
 
 export const pool = new Pool({
   user: process.env.PG_USER,
@@ -10,7 +10,7 @@ export const pool = new Pool({
   // max: 20, // Número máximo de conexões permitidas no pool
 });
 
-// se eu criar com os nomes de o .env com esses nomes:
+// se eu criar as variáveis de ambiente no .env com os nomes:
 // PGUSER=
 // PGPASSWORD=
 // PGHOST=localhost
@@ -20,5 +20,3 @@ export const pool = new Pool({
 // eu consigo apenas criar o arquivo de conexão com o banco de dados, dessa forma:
 // import { Pool } from 'pg'
 // const pool = new Pool()
-
-    
