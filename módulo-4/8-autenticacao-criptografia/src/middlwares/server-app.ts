@@ -7,11 +7,13 @@ import express, {
 } from 'express';
 
 import { serverLog } from './server-log';
+import { routes } from '../routes';
 
 export const createServer = (): Express => {
     const app = express();
     app.use(json());
     app.use(serverLog);
+    app.use(routes);
     
 
     app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
