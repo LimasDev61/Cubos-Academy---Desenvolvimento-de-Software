@@ -3,8 +3,13 @@ import UserRepository from "../repositories/user-repository";
 
 export class ListUsers {
   async list(req: Request, res: Response) {
-    const userRepository = new UserRepository();
-    const users = await userRepository.find();
-    res.status(200).json(users);
+    try {
+      const userRepository = new UserRepository();
+      const users = await userRepository.find();
+      res.status(200).json(users);
+    } catch (error) {
+      const erro = error as Error;
+      res.status(500).json({ error: erro.message });
+    }
   }
 }

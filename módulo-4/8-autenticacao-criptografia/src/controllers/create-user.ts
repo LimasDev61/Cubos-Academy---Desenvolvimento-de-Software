@@ -34,9 +34,7 @@ export default class CreateUser {
       res.status(201).json(user);
     } catch (error) {
       const erro = error as Error;
-      res.status(400).json({
-        message: erro.message,
-      });
+      res.status(500).json({ error: erro.message });
     }
   }
 }
