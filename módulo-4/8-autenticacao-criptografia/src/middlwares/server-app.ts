@@ -6,6 +6,7 @@ import express, {
     Express,
 } from 'express';
 
+import 'dotenv/config';
 import { serverLog } from './server-log';
 import { routes } from '../routes';
 

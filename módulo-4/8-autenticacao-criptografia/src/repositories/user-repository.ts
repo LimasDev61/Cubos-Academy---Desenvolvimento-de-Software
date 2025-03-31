@@ -26,7 +26,7 @@ export default class UserRepository {
     return rows[0];
   }
 
-  async find(email: string) {
+  async find() {
     const query = "SELECT * FROM users";
     const { rows } = await pool.query(query);
     return rows;
@@ -34,7 +34,7 @@ export default class UserRepository {
 
   async create(props: TUserProps) {
     const query =
-      "INSERT INTO users (id, name, email, password) VALUES ($1, $2, $3, $4) RETURNING *";
+      "INSERT INTO users (id, name, email, password) VALUES ($1, $2, $3, $4)";
     await pool.query(query, [
       props.id,
       props.name,
