@@ -10,6 +10,7 @@ export default class CreateUser {
       res.status(400).json({
         message: "os campos name, email e password são obrigatórios",
       });
+      return;
     }
 
     try {
@@ -21,6 +22,7 @@ export default class CreateUser {
         res.status(400).json({
           message: "email informado já existe",
         });
+        return;
       }
 
       const user = new User({
@@ -32,9 +34,11 @@ export default class CreateUser {
       await userRepository.create(user);
 
       res.status(201).json(user);
+      return;
     } catch (error) {
       const erro = error as Error;
       res.status(500).json({ error: erro.message });
+      return;
     }
   }
 }

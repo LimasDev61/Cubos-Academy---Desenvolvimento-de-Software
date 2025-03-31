@@ -7,9 +7,11 @@ export class ListUsers {
       const userRepository = new UserRepository();
       const users = await userRepository.find();
       res.status(200).json(users);
+      return;
     } catch (error) {
       const erro = error as Error;
       res.status(500).json({ error: erro.message });
+      return;
     }
   }
 }
