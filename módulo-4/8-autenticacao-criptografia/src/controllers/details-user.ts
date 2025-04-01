@@ -10,7 +10,7 @@ export class DetailsUser {
       const user = await userRepository.findById(id);
 
       if (!user) {
-        res.status(404).json({ message: "Usuário nao encontrado" });
+        res.status(404).json({ message: "Usuário não encontrado" });
         return;
       }
       res.status(200).json(user);
