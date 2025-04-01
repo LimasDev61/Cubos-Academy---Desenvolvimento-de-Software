@@ -3,7 +3,7 @@ import UserRepository from "../repositories/user-repository";
 
 export class DetailsUser {
   async details(req: Request, res: Response) {
-    const { id } = req.params;
+    const id = req.params.id.trim();
 
     try {
       const userRepository = new UserRepository();
