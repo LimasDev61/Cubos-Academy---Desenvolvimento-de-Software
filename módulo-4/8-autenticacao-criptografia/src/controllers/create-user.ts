@@ -35,7 +35,7 @@ export default class CreateUser {
       const hashPassword = await bcrypt.hash(password, 10);
 
       user.password = hashPassword;
-      
+
       await userRepository.create(user);
 
       res.status(201).json(user);
