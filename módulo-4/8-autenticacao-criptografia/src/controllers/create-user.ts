@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import UserRepository from "../repositories/user-repository";
 import User from "../models/user";
+import bcrypt from "bcrypt";
 
 export default class CreateUser {
   async create(req: Request, res: Response) {
@@ -31,6 +32,10 @@ export default class CreateUser {
         password,
       });
 
+      const hashPassword = await bcrypt.hash(password, 10);
+
+      user.password = hashPassword;
+      
       await userRepository.create(user);
 
       res.status(201).json(user);
