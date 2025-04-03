@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from "express";
-import jwt from "jsonwebtoken";
+import jwt, { TokenExpiredError } from "jsonwebtoken";
 
 export async function validarToken(
   req: Request,
@@ -28,7 +28,8 @@ export async function validarToken(
 
     next();
   } catch (error) {
-    res.status(401).json({ message: "Token inválido ou expirado" });
-    return;
+    if(error instanceof TokenExpiredError) {
+      res.status(401).json({ message: "Token expirado" });
+    }
   }
 }
