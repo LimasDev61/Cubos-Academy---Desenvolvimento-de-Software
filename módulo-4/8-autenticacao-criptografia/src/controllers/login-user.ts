@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import UserRepository from "../repositories/user-repository";
 import bcrypt from "bcrypt";
+import { gerarToken } from "../util/gerar-token";
 
 export default class LoginController {
   async login(req: Request, res: Response) {
@@ -30,7 +31,9 @@ export default class LoginController {
         return;
       }
 
-      res.status(200).json({ id: user.id, name: user.name, email: user.email });
+      const gerarTokens = gerarToken(user.id);
+
+      res.status(200).json({ token: gerarTokens });
     } catch (error) {
       const erro = error as Error;
       res.status(500).json({ error: erro.message });
