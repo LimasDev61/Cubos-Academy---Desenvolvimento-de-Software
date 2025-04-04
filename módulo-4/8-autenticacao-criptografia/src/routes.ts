@@ -5,6 +5,7 @@ import { DetailsUser } from "./controllers/details-user";
 import LoginController from "./controllers/login-user";
 import { validarToken } from "./util/validar-token";
 import DeleteUser from "./controllers/delete-user";
+import { UpdateUser } from "./controllers/update-user";
 
 export const routes = Router();
 
@@ -14,4 +15,5 @@ routes.post("/login", new LoginController().login);
 routes.use(validarToken);
 routes.get("/users", new ListUsers().list);
 routes.get("/users/:id", new DetailsUser().details);
+routes.put("/users/:id", new UpdateUser().update);
 routes.delete("/users/:id", new DeleteUser().delete);
