@@ -3,7 +3,6 @@ import UserRepository from "../repositories/user-repository";
 
 export class ListUsers {
   async list(req: Request, res: Response) {
-    const { authorization } = req.headers;
     try {
       const userRepository = new UserRepository();
       const users = await userRepository.find();
