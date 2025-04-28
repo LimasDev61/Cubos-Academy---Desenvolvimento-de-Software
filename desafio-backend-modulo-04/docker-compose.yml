@@ -1,0 +1,13 @@
+services:
+  db:
+    container_name: desafio_backend_sql_api_rest_db
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=limas
+      - POSTGRES_PASSWORD=limas123
+      - POSTGRES_DB=resume_ai
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
