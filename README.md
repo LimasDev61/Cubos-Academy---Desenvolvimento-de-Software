@@ -23,7 +23,7 @@ Este curso da [Cubos Academy](https://cubos.academy/cursos/desenvolvimento-de-so
 - [x] ~~Módulo - 1~~
 - [x] ~~Módulo - 2~~
 - [x] ~~Módulo - 3~~ 
-- [ ] Módulo - 4 
+- [x] ~~Módulo - 4~~ 
 - [ ] Módulo - 5
 - [ ] Módulo - 6
 <br>
