@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Herança</title>
+        <style>
+            body {
+                color:crimson;
+            }
+            h2 {
+                color: blue
+            }
+            a {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Herança</h1> <!-- h1 é filho da tag body, e recebe como herança o estilo da tag body -->
+        <h2>Meu sub-titulo</h2> <!-- h2 é filho da tag body. Porém, a cor do h2 pode ser modificada de acordo com sequência da cascata. -->
+        <a href="#">Meu link</a> <!-- Essa tag recebe como herança o estilo do agente(dentro do navegador por padrão) ela é estlizada de forma independente -->
+        <h2 style = "color: inherit">Meu sub-titulo<h2> <!-- Aqui, a cor do h2 foi herdada da tag body. Ou seja, inherit - Ele força a herança -->
+    </body>
+    </html>
