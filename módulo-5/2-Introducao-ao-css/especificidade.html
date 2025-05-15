@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidade</title>
+    <style>
+        body {
+            color: #fff;
+            background-color: #000;
+        }
+        p.destaque { /* Toda a tag P vai herdar a cor amarela, especificando apenas o P com classe destaque */
+            color: #ffff00;
+        }
+        h2#css { /* Toda a tag H2 vai herdar a cor amarela, especificando apenas o H2 com id css */
+            color: #f3ac08;
+            background-color: #5f04f0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <h1>Html é uma linguagem de marcação</h1>
+                <p class = "destaque">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                    Ex nobis voluptatum ut reprehenderit architecto. 
+                    Sapiente incidunt magni corrupti iusto molestias culpa cumque ut suscipit 
+                    excepturi doloribus. Consequuntur voluptatem perferendis aperiam!
+                </p>
+                <h2 class = "destaque" id="css">CSS - Cascading Style Sheets</h2>
+                <h2 class = "destaque">CSS - Cascading Style Sheets</h2>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
