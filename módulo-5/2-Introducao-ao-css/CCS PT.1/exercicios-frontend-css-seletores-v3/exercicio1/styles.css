@@ -1,0 +1,27 @@
+.central {
+    text-align: center;
+}
+.esquerda {
+    text-align: left;
+}
+.direita {
+    text-align: right;
+}
+
+.sombras {
+    text-shadow: 2px 2px 2px red;
+}
+
+.sublinhado {
+    text-decoration: underline;
+}
+.azul {
+    color: blue;
+}
+.verde {
+    color: green;
+}
+
+.amarelo {
+    color: yellow;
+}
