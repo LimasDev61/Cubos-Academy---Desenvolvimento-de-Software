@@ -1,0 +1,26 @@
+input::placeholder {
+    color: red;
+    font-size: 10px;
+}
+
+input:focus::placeholder {
+    color: green;
+}
+
+input:disabled::placeholder {
+    color: blue;
+}
+
+input {
+    color: orange;
+}
+
+h1::before {
+    content: '👋';
+    color: red;
+}
+
+h1::after {
+    content: '👋';
+    color: red;
+}
