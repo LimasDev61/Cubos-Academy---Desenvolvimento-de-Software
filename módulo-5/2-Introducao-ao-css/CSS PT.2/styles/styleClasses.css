@@ -1,0 +1,30 @@
+button:hover {
+    background-color: purple;
+    color: white;
+}
+
+button:active {
+    background-color: red;
+    color: white;
+}
+
+a {
+    color: #000;
+    display: block;
+}
+
+a:visited {
+    color: red;
+}
+
+input:focus {
+    background-color: blueviolet;
+}
+
+li:first-child {
+    background-color: green;
+}
+
+li:last-child {
+    background-color: red;
+}

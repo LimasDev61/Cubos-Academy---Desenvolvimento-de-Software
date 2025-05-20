@@ -7,10 +7,6 @@ input:focus::placeholder {
     color: green;
 }
 
-input:disabled::placeholder {
-    color: blue;
-}
-
 input {
     color: orange;
 }
