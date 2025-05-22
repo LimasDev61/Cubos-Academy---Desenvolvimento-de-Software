@@ -1,0 +1,21 @@
+p {
+    font-size: 30px;
+    font-family: "Comforter", cursive;
+    color: black;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 100; /* posso colocar pelos nomes também, como bold */
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: right;
+}
+h3 {
+    text-align: justify;
+}
