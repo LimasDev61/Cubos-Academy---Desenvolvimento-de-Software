@@ -1,0 +1,17 @@
+div {
+    background-color: yellow; /* cor de fundo */
+    background-image: url("https://media.istockphoto.com/id/1464383776/pt/foto/resurrected-jesus-christ-ascending-above-the-sky-and-clouds-heaven-concept.jpg?s=612x612&w=0&k=20&c=tkf7xuNqVzMTdd9s8TkiYb8icCC7IC9A6_obLfCSsRM="); /* imagem de fundo */
+    background-size: 100% 100%; /* tamanho da imagem */
+    background-repeat: no-repeat; /* nao repetir a imagem */
+    height: 450px; /* altura */
+    width: 500px; /* largura */
+    padding: 30px; /* espacamento interno */
+    box-sizing: border-box; /* para que o padding nao aumente a largura nem altura */
+    border: 5px solid red; /* borda */
+    color: crimson;
+}
+
+h1 {
+    text-align: center;
+    background-color: rgb(121, 248, 121);
+}
