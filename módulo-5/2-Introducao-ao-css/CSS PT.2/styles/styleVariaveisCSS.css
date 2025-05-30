@@ -1,0 +1,17 @@
+:root {
+    --cor-de-fundo: red;
+    --cor-do-texto: white;
+    --borda-padrao: 4px solid black;
+}
+
+h1 {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-do-texto);
+    border: var(--borda-padrao);
+}
+
+p {
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-do-texto);
+    border: var(--borda-padrao);
+}
