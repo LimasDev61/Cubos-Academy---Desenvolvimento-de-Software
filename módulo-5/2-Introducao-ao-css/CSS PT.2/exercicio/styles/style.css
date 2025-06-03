@@ -1,0 +1,115 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Variáveis CSS */
+:root {
+    --cor-fundo-secundaria: #4D3E3E;
+    --cor-texto-secundaria: #fff;
+    --cor-fundo-produto: #F5F5F5;
+    --borda-produto: 2px solid #000;
+    --borda-curvada: 33px;
+    --cor-texto-produto: blueviolet;
+    --cor-text-descricao-produto: #000;
+}
+/* Header */
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--cor-texto-secundaria);
+    font-weight: bold;
+}
+
+header {
+    background-color: var(--cor-fundo-secundaria);
+}
+
+.header-container {
+    height: 50px;
+    padding: 20px;
+}
+
+.header-container span {
+    color: var(--cor-texto-secundaria);
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Navegação */
+nav {
+    float: right;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    
+}
+
+nav a + a {
+    padding-left: 20px;
+}
+
+/* Main */
+main {
+    padding: 54px 49px;
+    box-sizing: border-box;
+    color:#000
+}
+
+.product h1 {
+    margin: 10px 0;
+    color: var(--cor-texto-produto);
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 9px;
+}
+
+.product p {
+    color: var(--cor-text-descricao-produto);
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    padding-left: 9px;
+}
+
+.product {
+    width: 300px;
+    height: 450px;
+    border-radius: var(--borda-curvada);
+    padding: 20px;
+    box-sizing: border-box;
+    border: var(--borda-produto);
+    background: var(--cor-fundo-produto);
+    float: left;
+}
+
+.product img {
+    width: 100%;
+    height: 40%;
+    border: #000 solid 1px;
+    object-fit: cover;
+    border-radius: var(--borda-curvada);
+}
+
+.product + .product {
+    margin-left: 51px;
+}
