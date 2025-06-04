@@ -34,24 +34,27 @@ body {
 
 header {
     background-color: var(--cor-fundo-secundaria);
+    align-items: center;
 }
 
 .header-container {
     height: 50px;
-    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header-container span {
     color: var(--cor-texto-secundaria);
     font-size: 20px;
     font-weight: 600;
+    padding: 10px;
     text-transform: capitalize;
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1100px;
     margin: auto;
-    padding: 10px;
 }
 
 /* Navegação */
@@ -69,9 +72,9 @@ nav a + a {
 
 /* Main */
 main {
-    padding: 54px 49px;
+    padding: 50px 30px;
     box-sizing: border-box;
-    color:#000
+    height: calc(100vh - 100px);
 }
 
 .product h1 {
@@ -111,5 +114,19 @@ main {
 }
 
 .product + .product {
-    margin-left: 51px;
+    margin-left: 60px;
+}
+
+/* footer */
+footer {
+    height: 50px;
+    background-color: var(--cor-fundo-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h1 {
+    font-size: 20px;
+    font-weight: 600;
 }
