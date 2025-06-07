@@ -1,0 +1,46 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+menu {
+    margin: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    border: 1px solid lightgray;
+    width: 150px;
+}
+
+.menu ul li {
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu ul li a {
+    display: block;
+    padding-top: 10px;
+    padding-left: 20px;
+    width: 100%;
+    height: 100%;
+    color: gray;
+    text-decoration: none;
+    font-family: "jetbrains mono", monospace;
+}
+
+.menu ul li a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.menu ul li a::before {
+    content: ">";
+    padding-right: 5px;
+}
+
+.menu ul li a:active {
+    background-color: lightgray;
+    color: whitesmoke;
+}
