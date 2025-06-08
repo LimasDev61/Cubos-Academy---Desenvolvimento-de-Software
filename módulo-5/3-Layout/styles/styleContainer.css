@@ -1,0 +1,33 @@
+main {
+    background-color: yellow;
+    padding: 20px;
+    width: 300px;
+}
+
+h1 {
+    background-color: red;
+}
+
+h2 {
+    background-color: green;
+}
+
+p {
+    background-color: blue;
+}
+
+div {
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+}
+
+ul {
+    background-color: aqua;
+    padding: 15px;
+}
+
+li {
+    background-color: brown;
+    padding: 10px;
+}
