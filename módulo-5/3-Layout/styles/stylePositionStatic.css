@@ -1,0 +1,6 @@
+h1 {
+    background-color: red;
+    position: static; /* Posição padrão, sem deslocamentos via top/right/bottom/left */
+    top: 50px; /* Não tem efeito */
+    left: 50px; /* Não tem efeito */
+}

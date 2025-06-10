@@ -1,0 +1,13 @@
+h1 {
+    background-color: red;
+    position: fixed;
+    top: 50px;
+    left: 50px
+}
+
+div {
+    position: absolute;
+    background-color: green;
+    width: 100vw;
+    height: 100vh;
+}
