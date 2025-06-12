@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+/* O Span é um elemento inline que não aceita width e height */
+span {
+    background-color: purple;
+    padding: 20px 50px;
+    margin: 20px 60px;
+}
+
+p {
+    background-color: red;
+    padding: 20px 50px;
+    margin: 20px 50px;
+}
+
+img {
+    background-color: green;
+    margin: 50px;
+    padding: 50px;
+}
