@@ -1,0 +1,4 @@
+body {
+    background-color: red !important; /* !important serve para dar prioridade ao estilo, o important fica após a propriedade e seu valor */
+    background-color: green; /* !important sempre vai ser prioritario */
+}
