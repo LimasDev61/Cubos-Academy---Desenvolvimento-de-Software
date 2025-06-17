@@ -1,0 +1,22 @@
+.icon-base {
+    display: inline-block;
+    vertical-align: middle;
+    width: 22px;
+    height: 22px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3px;
+}
+
+.salada-icon {
+    background-image: url("../assets/salada-icon.jpeg");
+}
+
+.bolo-icon {
+    background-image: url("../assets/bolo-icone.jpg");
+}
+
+.lasanha-icon {
+    background-image: url("../assets/lasanha-icon.png");
+}

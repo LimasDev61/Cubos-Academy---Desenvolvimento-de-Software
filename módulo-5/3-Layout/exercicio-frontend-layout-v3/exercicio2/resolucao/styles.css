@@ -1,0 +1,58 @@
+@import url(cores.css);
+@import url(icones.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'jetbrains mono', sans-serif;
+    background-image: url(https://i.pinimg.com/736x/6e/6c/d5/6e6cd5b650546afec38f297766e2a4fd.jpg);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: var(--cor-header);
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0px;
+    color: var(--cor-texto);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid var(--cor-border);
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;  
+    color: var(--cor-nav);
+    
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}

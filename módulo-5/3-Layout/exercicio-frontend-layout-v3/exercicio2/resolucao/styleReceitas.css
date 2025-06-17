@@ -1,0 +1,33 @@
+@import url(styles.css);
+@import url(cores.css);
+@import url(style-texto-css.css);
+
+.receitas img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.receitas {
+    border: 1px solid var(--cor-border);
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    margin-bottom: 10px;
+    padding-left: 40px;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: var(--cor-texto);
+}
+
+
