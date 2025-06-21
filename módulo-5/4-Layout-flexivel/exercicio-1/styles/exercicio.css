@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: jetbrains mono, monospace;
+    background-color: #fafafa;
+}
+
+body h1{
+    text-align: center;
+    margin: 32px 0;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* funciona com column também, utilizando column-gap */
+    justify-content: center;
+
+}
+
+.item {
+    width: 400px;
+    padding: 16px;
+    border: 1px solid #ccc;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.item img {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    padding: 16px 0;
+    align-items: center;
+    gap: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+
