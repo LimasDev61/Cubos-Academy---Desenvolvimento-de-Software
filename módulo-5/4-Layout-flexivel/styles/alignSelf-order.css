@@ -28,7 +28,7 @@
 
 .item2 {
     background-color: #00ff00;
-    order: 2; /* todo item antes do order por padrão é order: 0 */
+    order: 2; /* todo item antes do order por padrão é order: 0. */
 }
 
 .item3 {
