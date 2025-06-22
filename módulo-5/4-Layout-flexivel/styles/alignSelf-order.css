@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #b1f6036f;
+    padding: 20px;
+    height: 300px;
+    display: flex;
+
+}
+
+.item {
+    width: 100px;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.item1 {
+    background-color: #ff0000;
+    align-self: center; /* Alinha o item de forma independente */
+    order: 1; /* Define a ordem dos elementos */
+}
+
+.item2 {
+    background-color: #00ff00;
+    order: 2; /* todo item antes do order por padrão é order: 0 */
+}
+
+.item3 {
+    background-color: #0000ff;
+}
+
+.item4 {
+    background-color: orange;
+}
+
+.item5 {
+    background-color: white;
+    order: -1;
+}
