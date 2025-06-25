@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: #f4f4f4;
+}
+
+/* Container lateral */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    width: 250px;
+    padding-top: 24px;
+
+    background-color: #7c187c;
+    color: #a3a3a3;
+}
+
+/* Área do menu */
+.menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1px;
+}
+
+.menu h2 {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+    color: #ffffff;
+    border-bottom: 1px solid lightgray;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Itens do menu */
+.menu-item {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: inherit;
+}
+
+.menu-item:hover {
+    background-color: #370237;
+}
+
+.menu-item img {
+    width: 30px;
+    height: auto;
+    margin-right: 16px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Área do perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px 0;
+}
+
+.profile ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile .menu-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 16px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.profile .menu-item:hover {
+    background-color: #370237;
+}
+
+.profile .menu-item img {
+    width: 30px;
+    height: auto;
+    margin-right: 16px;
+}
+
+.profile .menu-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Avatar */
+.avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.avatar img {
+    width: 100px;
+    height: 100px;
+    border: 4px solid #0fa20f;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.avatar img:hover {
+    opacity: 0.6;
+    transform: scale(1.05);
+}
+
+.avatar strong {
+    color: lightgray;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
