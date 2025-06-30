@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validar formulário - CSS</title>
+    <link rel="stylesheet" href="./styles/validar-formulario-css.css">
+</head>
+<body>
+
+    <form action="">
+    <label for="texto1">Texto</label>
+    <input type="text" required
+    minlength="3" 
+    maxlength="10"
+    id="texto-principal"/> <!-- required é uma 
+    validação de campo obrigatório, minlength é uma validação de tamanho 
+    mínimo de caracteres e maxlength é uma validação de tamanho máximo de caracteres-->
+    <label for="number">Number</label>
+    <input type="number" min="0" max="50">
+    <br/>
+    <label for="texto2">Texto 2</label>
+    <input type="text" pattern="azul|amarela" />
+    <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>

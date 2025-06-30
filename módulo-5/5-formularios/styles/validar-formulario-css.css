@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#texto-principal:valid {
+    background-color: green;
+    border: 5px solid rgb(136, 249, 136);
+    border-radius: 5px;
+}
+
+#texto-principal:invalid {
+    background-color: red;
+    border: 5px solid rgb(249, 136, 136);
+    border-radius: 5px;
+}
+
+form:valid {
+    background-color: lightgray;
+}
+
+form:invalid {
+    background-color: lightcoral;
+}
+
+form:invalid button {
+    opacity: 0.5;
+    pointer-events: none;
+}
