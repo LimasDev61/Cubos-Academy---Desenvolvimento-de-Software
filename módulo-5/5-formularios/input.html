@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conhecendo o input</title>
+    <link rel="stylesheet" href="./styles/input.css">
+</head>
+<body>
+    <!-- Formulário -->
+    <form action="submit">
+        <!-- Agrupamento --> 
+        <fieldset>
+            <!-- Legenda para o agrupamento --> 
+            <legend>Informações Pessoais</legend>
+            <!-- Label é o texto que fica ao lado do input --> 
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" minlength="3" id="name" />
+            </div>
+            <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" minlength="3" />
+            </div>
+            <div>
+                <label for="password">Senha</label>
+                <input type="password" id="password" />
+            </div>
+            <div>
+                <label for="file">Arquivo</label>
+                <input type="file" id="file" />
+            </div>
+            <div>
+                <input type="hidden" id="id" value="123" /> 
+            </div>
+            <div>
+                <!-- não agrupados pelo name --> 
+                <label for="clt">CLT</label>
+                <input type="checkbox" id="clt" name="tipoTrabalho1" />
+                <label for="pj">PJ</label>
+                <input type="checkbox" id="pj" name="tipoTrabalho2"/>
+            </div>
+            <div>
+                <!-- Agrupados pelo name --> 
+                <label for="clt">CLT</label>
+                <input type="radio" id="clt" name="tipoTrabalho" />
+                <label for="pj">PJ</label>
+                <input type="radio" id="pj" name="tipoTrabalho"/>
+            </div>
+            <input type="button" value="Enviar" />
+            <button type="reset">Cancel</button>
+        </fieldset>
+    </form>
+</body>
+</html>

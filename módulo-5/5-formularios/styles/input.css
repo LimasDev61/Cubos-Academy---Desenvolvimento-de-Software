@@ -1,0 +1,41 @@
+#name:valid {
+    background-color: green;
+    border: 5px solid rgb(136, 249, 136);
+    border-radius: 5px;
+}
+
+#name:invalid {
+    background-color: red;
+    border: 5px solid rgb(249, 136, 136);
+    border-radius: 5px;
+}
+
+#email:valid {
+    background-color: green;
+    border: 5px solid rgb(136, 249, 136);
+    border-radius: 5px;
+}
+
+#email:invalid {
+    background-color: red;
+    border: 5px solid rgb(249, 136, 136);
+    border-radius: 5px;
+}
+
+#password:valid {
+    background-color: green;
+    border: 5px solid rgb(136, 249, 136);
+    border-radius: 5px;
+}
+
+#password:invalid {
+    background-color: red;
+    border: 5px solid rgb(249, 136, 136);
+    border-radius: 5px;
+}
+
+div {
+    padding: 5px;
+    background-color: lightblue;
+    border-radius: 5px;
+}
