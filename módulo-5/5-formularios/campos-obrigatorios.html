@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos obrigatórios</title>
+    <link rel="stylesheet" href="./styles/campos-obrigatorios.css">
+</head>
+<body>
+    <form action="">
+    <p>Todos os Campos com * são obrigatórios</p>
+    <!-- Quando colocamos " * " dentro do campo, esse campo passa a ser obrigatório -->
+    <label for="text">Disable <span>*</span></label>
+    <!-- Esse campo não passa para o backend -->
+    <input type="text" disabled value="Desabilitado"/> 
+    <!-- Esse campo, passa para o backend -->
+    <input type="text" readonly value="Somente leitura"/>
+    </form>
+</body>
+</html>
